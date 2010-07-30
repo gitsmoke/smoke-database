@@ -16,7 +16,7 @@ CREATE TABLE developer (
     guest       INTEGER DEFAULT 0,
     CONSTRAINT 'fk_developer_preference' FOREIGN KEY ('preference') REFERENCES 'preference' ('id')
 );
-INSERT INTO "developer" VALUES(1,'admin','Joe','Admin','test@test.com','YhKDbhvT1LKkg',1,1,0);
+INSERT INTO "developer" VALUES(1,'avar','AEvar','Arnfjord Bjarmason','avarab+smolder@gmail.com','ZcuV/MNSUiwjE',1,1,0);
 INSERT INTO "developer" VALUES(2,'anonymous','','','','',0,2,1);
 CREATE TABLE preference (
     id          INTEGER PRIMARY KEY AUTOINCREMENT, 
