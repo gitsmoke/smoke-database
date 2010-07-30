@@ -42,7 +42,7 @@ CREATE TABLE project (
     max_reports         INTEGER DEFAULT 100,
     extra_css           TEXT DEFAULT ''
 );
-INSERT INTO "project" VALUES(1,'Git','2010-07-30 00:00:00',1,1,'','','project',0,99999999,'');
+INSERT INTO "project" VALUES(1,'Git','2010-07-30 00:00:00',1,1,'','','project',1,99999999,'');
 CREATE TABLE project_developer (
     project     INTEGER NOT NULL, 
     developer   INTEGER NOT NULL,
