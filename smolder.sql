@@ -42,6 +42,7 @@ CREATE TABLE project (
     max_reports         INTEGER DEFAULT 100,
     extra_css           TEXT DEFAULT ''
 );
+INSERT INTO "project" VALUES(1,'Git','2010-07-30 00:00:00',1,1,'','','project',0,99999999,'');
 CREATE TABLE project_developer (
     project     INTEGER NOT NULL, 
     developer   INTEGER NOT NULL,
@@ -118,6 +119,7 @@ CREATE TABLE test_file_result  (
 DELETE FROM sqlite_sequence;
 INSERT INTO "sqlite_sequence" VALUES('developer',2);
 INSERT INTO "sqlite_sequence" VALUES('preference',2);
+INSERT INTO "sqlite_sequence" VALUES('project',1);
 CREATE INDEX i_preference_developer on developer (preference);
 CREATE UNIQUE INDEX unique_username_developer on developer (username);
 CREATE UNIQUE INDEX i_project_name_project on project (name);
