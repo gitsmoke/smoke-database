@@ -31,6 +31,7 @@ CREATE TABLE preference (
 INSERT INTO "preference" VALUES(1,'full','on_new',0,0,NULL,1);
 INSERT INTO "preference" VALUES(2,'full','on_new',0,0,NULL,1);
 INSERT INTO "preference" VALUES(3,'full','on_new',0,0,NULL,1);
+INSERT INTO "preference" VALUES(4,'full','on_new',0,0,NULL,1);
 CREATE TABLE project (
     id                  INTEGER PRIMARY KEY AUTOINCREMENT, 
     name                TEXT NOT NULL,
@@ -56,6 +57,7 @@ CREATE TABLE project_developer (
     CONSTRAINT 'fk_project_developer_developer' FOREIGN KEY ('developer') REFERENCES 'developer' ('id') ON DELETE CASCADE,
     CONSTRAINT 'fk_project_developer_preference' FOREIGN KEY ('preference') REFERENCES 'preference' ('id')
 );
+INSERT INTO "project_developer" VALUES(1,1,4,1,'2010-08-10 11:26:03');
 CREATE TABLE smoke_report  (
     id              INTEGER PRIMARY KEY AUTOINCREMENT, 
     project         INTEGER NOT NULL, 
@@ -7422,7 +7424,7 @@ INSERT INTO "test_file_result" VALUES(6298,1,485,13,485,0,0,100,1281290535);
 INSERT INTO "test_file_result" VALUES(6299,1,486,13,486,41,0,100,1281290535);
 DELETE FROM sqlite_sequence;
 INSERT INTO "sqlite_sequence" VALUES('developer',3);
-INSERT INTO "sqlite_sequence" VALUES('preference',3);
+INSERT INTO "sqlite_sequence" VALUES('preference',4);
 INSERT INTO "sqlite_sequence" VALUES('project',1);
 INSERT INTO "sqlite_sequence" VALUES('smoke_report',13);
 INSERT INTO "sqlite_sequence" VALUES('test_file',978);
