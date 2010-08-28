@@ -28,7 +28,7 @@ CREATE TABLE preference (
     email_sent_timestamp INTEGER,
     show_passing INT DEFAULT 1
 );
-INSERT INTO "preference" VALUES(1,'summary','on_new',0,0,NULL,0);
+INSERT INTO "preference" VALUES(1,'summary','on_fail',0,0,NULL,0);
 INSERT INTO "preference" VALUES(2,'full','on_new',0,0,NULL,1);
 INSERT INTO "preference" VALUES(3,'full','on_new',0,0,NULL,1);
 INSERT INTO "preference" VALUES(4,'full','on_new',0,2,'2010-08-27 00:08:56',1);
